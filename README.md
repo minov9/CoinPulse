@@ -2,13 +2,6 @@
 
 A comprehensive cryptocurrency tracking app for iOS, built entirely with SwiftUI. Real-time market data, portfolio management, and detailed coin analytics — all in a clean, native interface.
 
-<p align="center">
-  <img src="ReadmeAssets/dark_mode_market.png" width="180" />
-  <img src="ReadmeAssets/dark_mode_details.png" width="180" />
-  <img src="ReadmeAssets/dark_mode_portfolio.png" width="180" />
-  <img src="ReadmeAssets/dark_mode_settings.png" width="180" />
-</p>
-
 ## Features
 
 - 📈 **Live Market Data** — Top coins with real-time prices and 7-day sparkline charts
@@ -26,18 +19,6 @@ A comprehensive cryptocurrency tracking app for iOS, built entirely with SwiftUI
 | Persistence | CoreData |
 | Architecture | MVVM |
 | Data Source | [CoinGecko API](https://www.coingecko.com/en/api) |
-
-## Screenshots
-
-### Dark Mode
-| Market | Details | Transaction | Portfolio | Settings |
-|:---:|:---:|:---:|:---:|:---:|
-| <img src="ReadmeAssets/dark_mode_market.png"> | <img src="ReadmeAssets/dark_mode_details.png"> | <img src="ReadmeAssets/dark_mode_transaction.png"> | <img src="ReadmeAssets/dark_mode_portfolio.png"> | <img src="ReadmeAssets/dark_mode_settings.png"> |
-
-### Light Mode
-| Market | Details | Transaction | Portfolio | Settings |
-|:---:|:---:|:---:|:---:|:---:|
-| <img src="ReadmeAssets/light_mode_market.png"> | <img src="ReadmeAssets/light_mode_details.png"> | <img src="ReadmeAssets/light_mode_transaction.png"> | <img src="ReadmeAssets/light_mode_portfolio.png"> | <img src="ReadmeAssets/light_mode_settings.png"> |
 
 ## Requirements
 
