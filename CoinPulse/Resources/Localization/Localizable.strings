@@ -1,0 +1,93 @@
+/* 
+  Localizable.strings
+  Crypro
+
+  Created by Mino on 03.05.2024
+  
+*/
+
+// MARK: - Home
+
+"portfolio" = "PORTFOLIO";
+"livePrices" = "MARKET";
+"searchByNameOrSymbol" = "Search by name or symbol...";
+"coinRow" = "Coin";
+"totalVolumeRow" = "Volume";
+"priceRow" = "Price";
+
+// MARK: - Portfolio
+
+"portfolioTip" = "You haven't added any coins to your portfolio yet. Click the + button in the bottom left corner to get started!\n↙";
+"holdingsRow" = "Holdings";
+"marketCap" = "Market Cap";
+"volume24h" = "24h Volume";
+"btcDominance" = "BTC Dominance";
+"activeCryptocurrencies" = "Active Coins";
+"markets" = "Markets";
+"totalIcos" = "Total ICOs";
+"zeroStatChange" = "";
+
+// MARK: - Edit Portfolio
+
+"editPortfolio" = "Edit Portfolio";
+"amountHolding" = "Amount holding...";
+"saveButton" = "Save";
+"marketCap" = "Market Cap";
+"portfolioValue" = "Portfolio Value";
+"coinsInPortfolio" = "Portfolio Coins";
+"currentPrice" = "Current Price";
+"currentPrice" = "Current Price";
+"allTimeHigh" = "All Time High";
+"allTimeLow" = "All Time Low";
+
+// MARK: - Coin Details
+
+"sevenDaysChart" = "7 days chart";
+"overview" = "Overview";
+"additionalDetails" = "Additional Details";
+"collapse" = "Collapse ↑";
+"readMore" = "Expand ↓";
+
+"detailsCurrentPrice" = "Current Price";
+"marketCapitalization" = "Market Capitalization";
+"rank" = "Rank";
+"volume" = "Volume";
+"high24h" = "24H High";
+"low24h" = "24H Low";
+"priceChange24h" = "24H Price Change";
+"marketCapChange24h" = "24H Market Cap Change";
+"blockTime" = "Block Time";
+"hashingAlgorithm" = "Hashing Algorithm";
+"notAvailable" = "n/a";
+
+"website" = "Website";
+"twitter" = "X.com";
+"telegram" = "Telegram";
+"reddit" = "Reddit";
+
+// MARK: - Information
+
+"information" = "Information";
+"appDescription" = "Cryptocurrency tracker\n\n • SwiftUI\n • Combine \n • CoreData\n • MVVM";
+"visitGitHub" = "View GitHub";
+"settings" = "Settings";
+"darkTheme" = "Dark Appearance";
+
+
+// MARK: - Network Errors
+
+"errorTitle" = "Error";
+"okButton" = "OK";
+"badResponseFromURLError" = "Portfolio";
+"retryLimitReachedError" = "Retry limit reached";
+"unknownErrorOccurredError" = "Unknown error occurred";
+"invalidEndpointError" = "Invalid endpoint";
+"decodingResponseError" = "Error decoding response";
+"longLoadingMessage" = "Decrypting the blockchain…";
+
+// MARK: - Abbreviations 
+
+"trillionAbbreviation" = "Tr";
+"billionAbbreviation" = "Bn";
+"millionAbbreviation" = "M";
+"thousandAbbreviation" = "K";

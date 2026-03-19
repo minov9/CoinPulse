@@ -1,0 +1,55 @@
+//
+//  NetworkManager.swift
+//  CoinPulse
+//
+//  Created by Mino on 02.04.2024.
+//
+
+import Combine
+import Foundation
+
+final class NetworkManager: NetworkManagerProtocol {
+    private let decoder: JSONDecoder
+
+    init(decoder: JSONDecoder = JSONDecoder()) {
+        self.decoder = decoder
+        self.decoder.keyDecodingStrategy = .convertFromSnakeCase
+    }
+
+    func download<T>(from endpoint: APIEndpoint,
+                     convertTo _: T.Type) -> AnyPublisher<T, NetworkError> where T: Decodable {
+        guard let url = endpoint.url else {
+            return Fail(error: .invalidEndpoint).eraseToAnyPublisher()
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = endpoint.method.rawValue
+        endpoint.headers.forEach { request.addValue($1, forHTTPHeaderField: $0) }
+        return URLSession.shared.dataTaskPublisher(for: request)
+            .tryMap { output in
+                try self.handleURLResponse(output: output, url: url)
+            }
+            .retry(3)
+            .mapError { error in
+                (error as? NetworkError) ?? .unknown
+            }
+            .decode(type: T.self, decoder: decoder)
+            .mapError { _ in .decodingError }
+            .eraseToAnyPublisher()
+    }
+
+    func download(url: URL) -> AnyPublisher<Data, Error> {
+        URLSession.shared.dataTaskPublisher(for: url)
+            .tryMap { try self.handleURLResponse(output: $0, url: url) }
+            .retry(3)
+            .eraseToAnyPublisher()
+    }
+
+    private func handleURLResponse(output: URLSession.DataTaskPublisher.Output, url: URL) throws -> Data {
+        guard let response = output.response as? HTTPURLResponse,
+              response.statusCode >= 200 && response.statusCode < 300
+        else {
+            throw NetworkError.badURLResponse(url: url)
+        }
+        return output.data
+    }
+}
